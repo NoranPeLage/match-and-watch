@@ -12,12 +12,12 @@ jobs:
       - uses: expo/expo-github-action@v5
         with:
           expo-version: 3.x
-          expo-username: ${{ secrets.EXPO_CLI_USERNAME }}
-          expo-password: ${{ secrets.EXPO_CLI_PASSWORD }}
+          expo-token: ${{ secrets.EXPO_TOKEN }}
       - run: yarn install
       - run: expo publish --release-channel=pr-${{ github.event.number }}
       - uses: unsplash/comment-on-pr@master
         env:
           GITHUB_TOKEN: ${{ secrets.CI_GITHUB_TOKEN }}
         with:
+          check_for_duplicate_msg: false
           msg: App is ready for review, you can [see it here](https://expo.io/@noranpelage/match-and-watch?release-channel=pr-${{ github.event.number }}).
