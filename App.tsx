@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-// eslint-disable-next-line import/no-unresolved
 import { StyleSheet, Text, View } from 'react-native';
 
 const white = '#fff';

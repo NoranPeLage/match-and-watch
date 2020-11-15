@@ -32,6 +32,8 @@ module.exports = {
     "react-native/no-color-literals": 2,
     "react-native/no-raw-text": 0,
     "prettier/prettier": 2,
+    // custom rules
     "import/extensions": "off",
+    "import/no-unresolved": [2, { ignore: ['react-native'] }]
   }
 };
