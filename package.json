@@ -7,7 +7,7 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "lint": "eslint App.tsx",
-    "fix": "eslint App.tsx --fix"
+    "fix": "eslint App.tsx --fix",
     "test": "jest"
   },
   "dependencies": {
