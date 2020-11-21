@@ -15,7 +15,8 @@ module.exports = {
   settings: {
     "import/resolver": {
       node: {
-        extensions: [".ts", ".tsx"]
+        extensions: [".ts", ".tsx", ".js", ".jsx"],
+        moduleDirectory: ["node_modules", "src/"]
       }
     }
   },
@@ -34,6 +35,7 @@ module.exports = {
     "prettier/prettier": 2,
     // custom rules
     "import/extensions": "off",
-    "import/no-unresolved": [2, { ignore: ['react-native'] }]
+    "import/no-unresolved": [2, { ignore: ['react-native'] }],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   }
 };
