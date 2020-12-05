@@ -6,6 +6,6 @@ describe('App', () => {
   it('should render', () => {
     const app = shallow(<App />);
 
-    expect(app).toExist();
+    expect(app.exists).toBeTruthy();
   });
 });
